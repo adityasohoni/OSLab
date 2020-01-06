@@ -41,7 +41,7 @@ int main()
     perror("link");
     
     printf("\nDELINK\n");//DELINK
-	lk=unlink (NEWLINK);
+	//lk=unlink (NEWLINK);
     printf("lk = %d\n", lk);
 
     //Print
