@@ -4,6 +4,7 @@
 #include<string.h>
 #include<unistd.h>
 #include<stdlib.h>
+#include <sys/stat.h>
 extern int errno; 
 int main() 
 {   
@@ -44,6 +45,24 @@ int main()
 	//lk=unlink (NEWLINK);
     printf("lk = %d\n", lk);
 
+    printf("\nACCESS\n");
+    int ac=access(filename,F_OK);
+    printf("%d\n",ac);
+
+    printf("\nCHMOD\n");
+    int chm=chmod(filename,S_IWUSR);
+    printf("%d\n",chm);
+
+    printf("\nCHOWN\n");
+    int cow=chown(filename,00,12);
+    printf("%d\n",cow);
+    perror("CHOWN");
+
+    printf("\nMASK\n");
+    umask(0000);
+    creat("umsk.txt",666);
+
+    
     //Print
     printf("fd = %d\n", fd); 
     
