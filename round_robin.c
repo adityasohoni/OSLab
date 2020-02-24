@@ -46,13 +46,19 @@ void main()
 	}
 	
 	int curr[n];
-	int currub;
-	
+	int currub=-1;
+	int currcnt=0;
 	for(int i=0;;i++)
 	{
 		for(int j=0;j<=arrsub[i];j++)
 			curr[++currub]=arrs[i][j];
-		p[curr]
+		currub++;
+		p[curr[(currcnt)%(currub)]].b--;
+		if(p[curr[(currcnt)%(currub)]].b==0)
+		{
+			for(int k=0;i)
+		}
+		currcnt++;
 	}
 
 	printf("\nProcess id   Turnaround Time     Wait Time\n");
