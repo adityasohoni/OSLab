@@ -48,4 +48,12 @@ int main()
 		printf("%d %d %d\n",i,ans[i],bsz[ans[i]]-prsz[i]);
 	//for(int i=0;i<b;i++)
 		//printf("%d ",alloc[i]);
+
+	int extfr=0;
+	for(int i=0;i<b;i++)
+		if(!alloc[i])
+			extfr+=bsz[i];
+
+	printf("External Fragmentation %d\n",extfr);
+
 }

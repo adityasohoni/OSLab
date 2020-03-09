@@ -31,6 +31,9 @@ int main()
 		printf("%d %d %d\n",i,ans[i][0],ans[i][1]);
 
 	}
-	printf("The External Fragmentation %d",m-ans[n-1][1]-1);
+	printf("The External Fragmentation %d\n",m-ans[n-1][1]-1);
+
+
+//	printf("Deallocating a Process\n");
 
 }

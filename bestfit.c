@@ -40,10 +40,20 @@ int main()
 			}
 			
 		}
-		alloc[pos]=j;
+		alloc[pos]=1;
 	}
 	printf("The Process ID, Block Number and Internal Fragmentation\n");
 	for(int i=0;i<n;i++)
-		printf("%d %d %d\n",i+1,ans[i]+1,bsz[ans[i]]-prsz[i]);
+	{
+		
+		printf("%d %d %d\n",i,ans[i],bsz[ans[i]]-prsz[i]);
+	}
+
+	int extfr=0;
+	for(int i=0;i<b;i++)
+		if(!alloc[i])
+			extfr+=bsz[i];
+
+	printf("External Fragmentation %d\n",extfr);
 
 }
